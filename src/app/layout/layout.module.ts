@@ -17,6 +17,9 @@ import { DomainModule } from '../domain/domain.module';
     CommonModule,
     NgxSpinnerModule,
     DomainModule
+  ],
+  exports: [
+    PageLoaderComponent,
   ]
 })
 export class LayoutModule { }

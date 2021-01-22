@@ -1,5 +1,5 @@
-<section id="home">
-  <img src="assets/backgrouds/background.png" (load)="show()">
+<section id="home" image-loaded>
+  <img src="assets/backgrouds/background.png" (load)="loaded()" [@visibilityBackgroud]="loadedImage">
   <div class="home flex" (click)="stop()">
     <div class="flex">
       <div class="text text-center">
@@ -7,7 +7,7 @@
         <span class="name">{{showName}}</span>
         <span class="dev">{{showMessageDeveloper}}</span>
       </div>
-      <button *ngIf="showButton" class="btn btn-outline-primary btn-work" (click)="scroll('contact')" [@fadeInOut]>
+      <button class="btn btn-outline-primary btn-work" (click)="scroll('contact')" [@visibilityButton]="showButton">
         View my work <i class="fa fas fa-angle-double-right"></i>
       </button>
     </div>

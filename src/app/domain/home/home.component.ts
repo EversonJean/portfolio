@@ -1,21 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, style, animate, transition } from '@angular/animations';
+import { trigger, style, animate, transition, state } from '@angular/animations';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   animations: [
-    trigger('fadeInOut', [
-      transition(':enter', [
-        style({ opacity: 0 }),
-        animate(2000, style({ opacity: 1 }))
-      ]),
-      transition(':leave', [
-        animate(2000, style({ opacity: 0 }))
-      ])
+    trigger('visibilityBackgroud', [
+      state('true', style({ opacity: 1 })),
+      state('false', style({ opacity: 0 }))
+    ]),
+    trigger('visibilityButton', [
+      state('true', style({ opacity: 1 })),
+      state('false', style({ opacity: 0 })),
+      transition('* => *', animate('.5s'))
     ])
-  ]
+  ],
 })
 export class HomeComponent implements OnInit {
 
@@ -26,10 +27,21 @@ export class HomeComponent implements OnInit {
   showName = '';
   showMessageHello = '';
   showMessageDeveloper = '';
+  loadedImage = false;
   showButton = false;
 
+  constructor(private spinner: NgxSpinnerService) {
+  }
+
   ngOnInit() {
+    this.spinner.show();
     this.scroll('home');
+  }
+
+  loaded() {
+    this.loadedImage = true;
+    this.spinner.hide();
+    this.show();
   }
 
   show() {
