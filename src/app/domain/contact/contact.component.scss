@@ -1,1 +1,17 @@
+.area {
+  padding: 10px 10em;
 
+  &.message {
+    .header {
+      padding-bottom: 15px;
+    }
+
+    form > div {
+      padding-bottom: 15px;
+    }
+  }
+
+  &.contact-info {
+
+  }
+}

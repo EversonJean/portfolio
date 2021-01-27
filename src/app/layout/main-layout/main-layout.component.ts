@@ -15,12 +15,12 @@ export class MainLayoutComponent {
   @HostListener('window:scroll', ['$event'])
   scrollHandler() {
     if (window.pageYOffset > window.innerHeight - 10) {
-      if (!this.headerService.isShow) {
-        this.headerService.show();
+      if (!this.headerService.isFixed) {
+        this.headerService.pin();
       }
     } else {
-      if (this.headerService.isShow) {
-        this.headerService.hide();
+      if (this.headerService.isFixed) {
+        this.headerService.unpin();
       }
     }
   }

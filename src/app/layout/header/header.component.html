@@ -1,8 +1,7 @@
-<nav id="header" [ngClass]="{'nav-fixed': fixed}" class="navbar navbar-expand-md bg-dark navbar-dark">
+<nav [ngClass]="{'nav-fixed': fixed}" class="navbar navbar-expand-md bg-dark navbar-dark">
   <div class="container">
     <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -23,4 +22,3 @@
     </div>
   </div>
 </nav>
-<div *ngIf="fixed" class="offset"></div>

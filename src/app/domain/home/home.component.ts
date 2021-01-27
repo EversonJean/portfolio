@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.spinner.show();
-    this.scroll('home');
+    //this.scroll('home');
   }
 
   loaded() {

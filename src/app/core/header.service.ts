@@ -4,29 +4,29 @@ import { BehaviorSubject, Subject } from 'rxjs';
 @Injectable({ providedIn: 'root' })
 export class HeaderService {
 
-  private showHeader: BehaviorSubject<boolean | null>;
+  private fixed: BehaviorSubject<boolean | null>;
 
   constructor() {
-    this.showHeader = new BehaviorSubject<boolean | null>(false);
+    this.fixed = new BehaviorSubject<boolean | null>(false);
   }
 
-  get observable() {
-    return this.showHeader.asObservable();
+  get changes() {
+    return this.fixed.asObservable();
   }
 
-  get isShow() {
-    return this.showHeader.value;
+  get isFixed() {
+    return this.fixed.value;
   }
 
-  show() {
-    this.showHeader.next(true);
+  pin() {
+    this.fixed.next(true);
   }
 
-  hide() {
-    this.showHeader.next(false);
+  unpin() {
+    this.fixed.next(false);
   }
 
   toogle() {
-    this.showHeader.next(null);
+    this.fixed.next(null);
   }
 }
