@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     // this.spinner.show();
-    this.headerService.scrollTo('contact');
+    // this.headerService.scrollTo('contact');
     this.loaded();
   }
 
