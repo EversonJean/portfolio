@@ -1,0 +1,10 @@
+nav {
+  width: 100%;
+  position: absolute;
+  background: rgba(0,0,0,.3);
+
+  &.nav-fixed {
+    position: fixed;
+    top: 0;
+  }
+}

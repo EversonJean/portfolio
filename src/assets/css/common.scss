@@ -1,0 +1,22 @@
+body {
+  color: white !important;
+  overflow-x: hidden !important;
+  // background-color: black !important;
+
+  background-color: #000056; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, #000327, #000056, #000327);
+
+  // background-image: url('../backgrouds/programming-02.jpg');
+  // background-repeat: round;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+  top: 0;
+
+  &:not(#home) {
+    padding-top: 125px;
+  }
+}

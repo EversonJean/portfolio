@@ -1,0 +1,40 @@
+.contact {
+  margin-bottom: 2.5em;
+  margin-left: 9.5em;
+}
+
+.area {
+  margin: 0 25px;
+
+  &.message {
+    .header {
+      padding-bottom: 15px;
+
+      .col-xs-12,
+      .col-sm-12 {
+        padding-bottom: 15px !important;
+      }
+    }
+
+    form > div {
+      padding-bottom: 8px;
+    }
+
+    form > div > div {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.icons {
+  font-size: 1.7em;
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    i {
+      padding: 0 7px;
+    }
+  }
+}

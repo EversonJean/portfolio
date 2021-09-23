@@ -1,0 +1,15 @@
+<section id="home" image-loaded>
+  <!-- <img src="assets/backgrouds/background.png" (load)="loaded()" [@visibilityBackgroud]="loadedImage"> -->
+  <div class="home flex" (click)="stop()">
+    <div class="flex">
+      <div class="text text-center">
+        <span class="hello">{{showMessageHello}}</span>
+        <span class="name">{{showName}}</span>
+        <span class="dev">{{showMessageDeveloper}}</span>
+      </div>
+      <button class="btn btn-outline-primary btn-work" (click)="scrollTo('contact')" [@visibilityButton]="showButton">
+        View my work <i class="fa fas fa-angle-double-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
